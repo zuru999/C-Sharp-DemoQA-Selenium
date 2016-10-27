@@ -1,0 +1,1 @@
+C:\C#\Automatyzacja\DemoQA-Test\DemoQA-WebTest\DemoQA-WebTest\bin\Debug\DemoQA-WebTest.exe.config
