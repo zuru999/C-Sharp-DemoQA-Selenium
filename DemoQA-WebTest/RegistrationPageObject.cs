@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
+
 namespace DemoQA_WebTest
 {
     class RegistrationPageObject
@@ -32,18 +33,6 @@ namespace DemoQA_WebTest
 
         [FindsBy(How = How.XPath, Using = ".//*[@id='pie_register']/li[3]/div/div[1]/input[3]")]
         public IWebElement checkboxHobby3 { get; set; }
-
-        [FindsBy(How = How.Id, Using = "dropdown_7")]              
-        public IWebElement btnCountryDropDown { get; set; }
-
-        [FindsBy(How = How.Id, Using = "mm_date_8")]
-        public IWebElement monthDropDown { get; set; }
-
-        [FindsBy(How = How.Id, Using = "dd_date_8")]
-        public IWebElement dayDropDown { get; set; }
-
-        [FindsBy(How = How.Id, Using = "yy_date_8")]
-        public IWebElement yearDropDown { get; set; }
 
         [FindsBy(How = How.Id, Using = "phone_9")]
         public IWebElement txtPhone { get; set; }
@@ -79,10 +68,10 @@ namespace DemoQA_WebTest
             checkboxHobby1.Click();
             checkboxHobby2.Click();
             checkboxHobby3.Click();
-            //btnCountryDropDown.FindElement.(By.XPath("//*[@id='dropdown_7']/option[145]");
-            //monthDropDown.Click();
-            //dayDropDown.Click();
-            //yearDropDown.Click();
+            SeleniumSetMethods.SelectDropDown("dropdown_7", "Poland", PropertyType.Id);
+            SeleniumSetMethods.SelectDropDown("mm_date_8", "6", PropertyType.Id);
+            SeleniumSetMethods.SelectDropDown("dd_date_8", "24", PropertyType.Id);
+            SeleniumSetMethods.SelectDropDown("yy_date_8", "1992", PropertyType.Id);
             txtPhone.SendKeys(PhoneNumber);
             txtUserName.SendKeys(Username);
             txtEmail.SendKeys(Email);
@@ -91,7 +80,9 @@ namespace DemoQA_WebTest
             txtPassword.SendKeys(Password);
             txtConfirmPassword.SendKeys(ConfirmPassword);
             //btnSubmit.Submit();
-
+            
+            
+            
        
 
         }

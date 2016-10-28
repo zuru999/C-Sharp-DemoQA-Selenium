@@ -41,6 +41,8 @@ namespace DemoQA_WebTest
             pageRegistration.FillRegistrationForm("Jan", "Kowalski", "6667778899", "Janek123", "janeczkomuzykant123@yopmail.com",
                 @"C:\Users\Zuru\Desktop\TestPicture.jpg","This is the test", "Password123", "Password123");
 
+           
+
         }
 
 
