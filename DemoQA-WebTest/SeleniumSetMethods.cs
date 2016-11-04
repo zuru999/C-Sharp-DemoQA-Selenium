@@ -13,12 +13,11 @@ namespace DemoQA_WebTest
     {
         // Selecting a dropdown control
 
-        public static void SelectDropDown (string element, string value, PropertyType elementtype)
+        public static void SelectDropDown (IWebElement element, string value)
         {
-            if (elementtype == PropertyType.Id)
-                new SelectElement(PropertiesToChromeDriver.chrome.FindElement(By.Id(element))).SelectByText(value);
-            if (elementtype == PropertyType.Name)
-                new SelectElement(PropertiesToChromeDriver.chrome.FindElement(By.Name(element))).SelectByText(value);
+            
+                new SelectElement(element).SelectByText(value);
+            
 
         }
     }

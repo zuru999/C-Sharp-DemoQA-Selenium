@@ -58,6 +58,19 @@ namespace DemoQA_WebTest
         [FindsBy(How = How.XPath, Using = ".//*[@id='pie_register']/li[14]/div/input")]
         public IWebElement btnSubmit { get; set; }
 
+        [FindsBy(How = How.Id, Using = "dropdown_7")]
+        public IWebElement countryDropDown { get; set; }
+
+        [FindsBy(How = How.Id, Using = "mm_date_8")]
+        public IWebElement monthDropDown { get; set; }
+
+        [FindsBy(How = How.Id, Using = "dd_date_8")]
+        public IWebElement dayDropDown { get; set; }
+
+        [FindsBy(How = How.Id, Using = "yy_date_8")]
+        public IWebElement yearDropDown { get; set; }
+
+
 
         public void FillRegistrationForm(string FirstName, string LastName, string PhoneNumber, string Username, string Email, string PathPicture,
             string Description, string Password, string ConfirmPassword)
@@ -68,10 +81,10 @@ namespace DemoQA_WebTest
             checkboxHobby1.Click();
             checkboxHobby2.Click();
             checkboxHobby3.Click();
-            SeleniumSetMethods.SelectDropDown("dropdown_7", "Poland", PropertyType.Id);
-            SeleniumSetMethods.SelectDropDown("mm_date_8", "6", PropertyType.Id);
-            SeleniumSetMethods.SelectDropDown("dd_date_8", "24", PropertyType.Id);
-            SeleniumSetMethods.SelectDropDown("yy_date_8", "1992", PropertyType.Id);
+            SeleniumSetMethods.SelectDropDown(countryDropDown, "Poland");
+            SeleniumSetMethods.SelectDropDown(monthDropDown, "6");
+            SeleniumSetMethods.SelectDropDown(dayDropDown, "24");
+            SeleniumSetMethods.SelectDropDown(yearDropDown, "1992");
             txtPhone.SendKeys(PhoneNumber);
             txtUserName.SendKeys(Username);
             txtEmail.SendKeys(Email);

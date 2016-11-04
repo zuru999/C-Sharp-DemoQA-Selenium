@@ -11,13 +11,11 @@ namespace DemoQA_WebTest
     class SeleniumGetMethods
     {
         
-        public static string GetTextFromDropDown(string element, PropertyType elementtype)
+        public static string GetTextFromDropDown(IWebElement element)
         {
-            if (elementtype == PropertyType.Id)
-                return new SelectElement(PropertiesToChromeDriver.chrome.FindElement(By.Id(element))).AllSelectedOptions.SingleOrDefault().Text;
-            if (elementtype == PropertyType.Name)
-                return new SelectElement(PropertiesToChromeDriver.chrome.FindElement(By.Name(element))).AllSelectedOptions.SingleOrDefault().Text;
-            else return String.Empty;
+          
+                return new SelectElement(element).AllSelectedOptions.SingleOrDefault().Text;
+           
         }
 
     }
