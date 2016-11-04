@@ -19,3 +19,4 @@ C:\C#\Automatyzacja\DemoQA-Test\DemoQA-WebTest\DemoQA-WebTest\obj\Debug\DemoQA-W
 C:\C#\Automatyzacja\DemoQA-Test\DemoQA-WebTest\DemoQA-WebTest\obj\Debug\DemoQA-WebTest.pdb
 C:\C#\Automatyzacja\DemoQA-Test\DemoQA-WebTest\DemoQA-WebTest\bin\Debug\mock-assembly.exe
 C:\C#\Automatyzacja\DemoQA-Test\DemoQA-WebTest\DemoQA-WebTest\bin\Debug\nunitlite.dll
+C:\C#\Automatyzacja\DemoQA-Test\DemoQA-WebTest\DemoQA-WebTest\obj\Debug\DemoQA-WebTest.csprojResolveAssemblyReference.cache
